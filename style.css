@@ -1,0 +1,232 @@
+/*============================INDEX============================*/
+/*=============================================================*/
+/*=============================================================*/
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Playfair+Display|Great+Vibes&display=swap');
+
+
+:root {
+  --background-color: #2E2E2E; 
+  --text-color: #F5F5DC; 
+  --header-background: #1C1C1C; 
+  --link-color: #800000; 
+  --link-hover-color: #DAA520;
+  --border-color: #4B3F2F; 
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  padding: 20px 0;
+ 
+
+}
+
+
+
+
+.navbar {
+  background-color: var(--header-background);
+  color: var(--text-color);
+
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.9em;
+  font-family: 'Great Vibes', cursive;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.nav-links {
+  display: flex;
+  padding-left: 50px;
+  gap: 50px;
+  font-size: 1.1em;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 15px 0;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--link-hover-color);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  background-color: var(--text-color);
+  width: 25px;
+  height: 3px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  transition: all ease-in-out 200ms;
+}
+
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-links {
+    position: fixed;
+    z-index: 1;
+    flex-direction: column;
+    width: 100%;
+    top: 55px;
+    left: -100%;
+    text-align: center;
+    transition: all ease-in-out 200ms;
+  }
+  .nav-links {
+    margin: 15px 0;
+  }
+  .nav-links.active {
+    left: 0;
+    background-color: var(--header-background);
+  }
+}
+
+.intro {
+  display: flex;
+ 
+}
+
+.intro-item{
+  margin: 0 auto;
+  padding: 20px;
+ display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  
+}
+
+/*text should start with the beginning of the image */
+.intro-text p{
+  font-family: 'Merriweather', serif;
+  font-size: 1.1em;
+  padding: 20px;
+    
+}
+
+.intro-image{
+
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.vintage-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: var(--link-color);
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: inset 0 0 0 1px var(--text-color);
+  
+}
+
+.vintage-button:hover {
+  background-color: var(--link-hover-color);
+  color: var(--background-color);
+}
+
+.link-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  
+}
+
+.quote-bubble {
+  margin: 20px;
+  padding: 8px;
+  border: 1px dotted var(--border-color);
+  border-radius: 10px;
+  background-color: var(--header-background);
+  color: var(--text-color);
+  font-family: 'Merriweather', serif;
+  font-size: 1.1em;
+  position: relative;
+  max-width: 500px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+@media screen and (max-width: 798px) {
+  .intro-item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .intro-image {
+    max-width: 100%;
+    padding: 10px;
+  }
+  .intro-text {
+    max-width: 100%;
+    padding: 10px;
+  }
+  .link-buttons {
+    justify-content: center;
+  }
+}
