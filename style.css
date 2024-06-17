@@ -401,3 +401,155 @@ nav {
   font-size: 1.2em;
   line-height: 1.5em;
 }
+
+/*============================CHARACTERS============================*/
+/*=============================================================*/
+/*=============================================================*/
+.characters-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.card-container {
+  perspective: 1000px;
+}
+
+.card {
+  width: 400px;
+  height: 450px;
+  margin: 20px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  flex-direction: column;
+  border: 2px solid var(--border-color);
+}
+.card-front p,
+.card-back p {
+  font-size: 1.15em;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-front {
+  background-color: var(--header-background);
+}
+
+.card-back {
+  background-color: var(--background-color);
+  transform: rotateY(180deg);
+}
+h4{
+  font-size: 1.2em;
+  padding: 5px;
+  text-align: center;
+}
+
+/*============================CREDITS============================*/
+/*=============================================================*/
+/*=============================================================*/
+
+.credits-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.credits-container section {
+  background: var(--header-background);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.credits-container h2 {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.credits-container p, .credits-container ul {
+  margin: 0 0 15px;
+}
+
+.credits-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+
+.credits-container a {
+  color: var(--text-color);
+  text-decoration: none;
+
+}
+
+.Btn {
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .4s;
+  cursor: pointer;
+  background-color: rgb(31, 31, 31);
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.svgIcon {
+  transition-duration: .3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.text {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  width: 120px;
+
+  opacity: 0;
+  transition-duration: .4s;
+}
+
+.Btn:hover {
+  width: 110px;
+  transition-duration: .4s;
+  border-radius: 30px;
+}
+
+.Btn:hover .text {
+  opacity: 1;
+  transition-duration: .4s;
+}
+
+.Btn:hover .svgIcon {
+  opacity: 0;
+  transition-duration: .3s;
+}
