@@ -1,18 +1,4 @@
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-const searchBar = document.getElementById("searchInput");
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navLinks.classList.toggle("active");
-});
-
-document.querySelectorAll(".nav-links li").forEach((item) => {
-  item.addEventListener("click", (event) => {
-    navLinks.classList.remove("active");
-    hamburger.classList.remove("active");
-  });
-});
 
 document.addEventListener("DOMContentLoaded", function() {
     const timeline = document.getElementById('timeline');
@@ -91,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const tooltip = document.createElement('span');
         tooltip.classList.add('tooltip');
-        // make tooltip always visible
+     
         
         tooltip.textContent = data.date;
 
@@ -104,13 +90,15 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             // Add the 'selected' class to the clicked circle
             circle.classList.add('selected');
-            // Update the selected circle reference
+           
             selectedCircle = circle;
-
-            // Update the information display
+            header = document.createElement('h3');
+            header.textContent = data.date;
+            infoContainer.innerHTML = '';
+            infoContainer.appendChild(header);
+            infoContainer.appendChild(info);
             info.textContent = data.event;
         });
-
         timeline.appendChild(circle);
     });
 });

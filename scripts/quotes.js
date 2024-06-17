@@ -534,7 +534,7 @@ document.addEventListener("DOMContentLoaded", function () {
     bookText.textContent = quoteObj.book;
 
     const tooltip = document.createElement("span");
-    tooltip.classList.add("tooltip");
+    tooltip.classList.add("quote-tooltip");
     tooltip.textContent = "Copied";
 
     quoteCard.appendChild(quoteText);
@@ -561,18 +561,4 @@ document.addEventListener("DOMContentLoaded", function () {
     quotesContainer.appendChild(quoteCard);
   });
 });
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-const searchBar = document.getElementById("searchInput");
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navLinks.classList.toggle("active");
-});
-
-document.querySelectorAll(".nav-links li").forEach((item) => {
-  item.addEventListener("click", (event) => {
-    navLinks.classList.remove("active");
-    hamburger.classList.remove("active");
-  });
-});

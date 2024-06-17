@@ -37,10 +37,17 @@ a:hover {
 h1 {
   font-family: 'Great Vibes', cursive;
   font-size: 3em;
-  padding: 20px 0;
+  padding: 60px 0 20px 0;
   text-align: center;
  
 
+}
+
+h3 {
+
+  font-size: 1.7em;
+  padding: 10px 0;
+  text-align: center;
 }
 
 
@@ -52,7 +59,6 @@ h1 {
 .navbar {
   background-color: var(--header-background);
   color: var(--text-color);
-
   top: 0;
   left: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -129,7 +135,7 @@ nav {
   }
   .nav-links {
     position: fixed;
-    z-index: 1;
+    z-index: 12;
     flex-direction: column;
     width: 100%;
     top: 50px;
@@ -143,6 +149,18 @@ nav {
   .nav-links.active {
     left: 0;
     background-color: var(--header-background);
+    z-index: 12;
+  }
+  .navbar.active{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    justify-content: space-between;
+    display: flex;
+    
+    z-index: 12;
+ 
   }
 }
 
@@ -248,7 +266,7 @@ nav {
 .quote-card:hover {
   transform: scale(1.05);
 }
-.tooltip {
+.quote-tooltip {
   visibility: hidden;
   background-color: var(--text-color);
   color: var(--background-color);
@@ -348,8 +366,8 @@ nav {
 
 .tooltip {
   visibility: hidden;
-  background-color: var(--tooltip-bg);
-  color: var(--tooltip-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
   text-align: center;
   border-radius: 5px;
   padding: 5px;
