@@ -59,9 +59,10 @@ h3 {
 .navbar {
   background-color: var(--header-background);
   color: var(--text-color);
-  top: 0;
   left: 0;
-  right: 0;
+    right: 0;
+    top: 0;
+    justify-content: space-between;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -122,6 +123,16 @@ nav {
 
 
 @media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav-links.active {
+    left: 0; /* Adjust this to make sure nav-links appear on screen */
+  }
+
+ 
   .hamburger {
     display: block;
   }
