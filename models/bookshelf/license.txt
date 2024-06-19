@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bookshelf with Hourglass
+* source:	https://sketchfab.com/3d-models/bookshelf-with-hourglass-b8c7d064cc7f4dfabcf8a681d76c74f5
+* author:	Eliza Jacobs (https://sketchfab.com/ElizaJacobs)
+
+Model License:
+* license type:	CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions can not be distributed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bookshelf with Hourglass" (https://sketchfab.com/3d-models/bookshelf-with-hourglass-b8c7d064cc7f4dfabcf8a681d76c74f5) by Eliza Jacobs (https://sketchfab.com/ElizaJacobs) licensed under CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
