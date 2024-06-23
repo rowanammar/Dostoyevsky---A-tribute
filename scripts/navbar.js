@@ -44,4 +44,20 @@ function addNavbar() {
   
 
   addNavbar();
-  
+  function showLoadingScreen() {
+    document.getElementById('loading-screen').style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Disable scrolling
+}
+
+// Function to hide the loading screen
+function hideLoadingScreen() {
+    document.getElementById('loading-screen').style.display = 'none';
+    document.body.style.overflow = 'auto'; // Enable scrolling
+}
+
+showLoadingScreen();
+
+
+window.onload = function() {
+    hideLoadingScreen();
+};
