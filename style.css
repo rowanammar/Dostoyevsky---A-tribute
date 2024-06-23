@@ -613,14 +613,15 @@ h4{
 .front {
   z-index: 1;
   backface-visibility: hidden;
-  border: var(--border-color) solid 1px;
+  border: var(--border-color) solid 2px;
   border-left: 3px solid var(--link-color);
 
 }
 
 .back {
   z-index: 0;
-  border: var(--border-color) solid 1px;
+  border: var(--border-color) solid 2px;
+  border-left: var(--link-color) solid 3px;
 }
 
 .front-content,
@@ -716,8 +717,8 @@ h4{
   left: 0;
   width: 100vw;
   height: 100vh;
-  display: none; 
   z-index: 9999; 
+  background-color: var(--background-color);
 }
 .hourglassBackground {
   position: relative;

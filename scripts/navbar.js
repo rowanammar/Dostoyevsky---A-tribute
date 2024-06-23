@@ -44,20 +44,26 @@ function addNavbar() {
   
 
   addNavbar();
-  function showLoadingScreen() {
-    document.getElementById('loading-screen').style.display = 'block';
-    document.body.style.overflow = 'hidden'; // Disable scrolling
-}
 
-// Function to hide the loading screen
+  function addLoadingScreen() {
+    const loadingScreenHTML = `
+<div class="hourglassBackground">
+  <div class="hourglassContainer">
+    <div class="hourglassCurves"></div>
+    <div class="hourglassCapTop"></div>
+    <div class="hourglassGlassTop"></div>
+    <div class="hourglassSand"></div>
+    <div class="hourglassSandStream"></div>
+    <div class="hourglassCapBottom"></div>
+    <div class="hourglassGlass"></div>
+  </div>
+</div>
+    `;
+    document.getElementById("loading-screen").innerHTML = loadingScreenHTML;
+  }
+  addLoadingScreen();
 function hideLoadingScreen() {
-    document.getElementById('loading-screen').style.display = 'none';
-    document.body.style.overflow = 'auto'; // Enable scrolling
+  document.getElementById('loading-screen').style.display = 'none';
 }
 
-showLoadingScreen();
-
-
-window.onload = function() {
-    hideLoadingScreen();
-};
+window.addEventListener('load', hideLoadingScreen);
