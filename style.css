@@ -706,6 +706,7 @@ h4{
 
 #container3D{
   padding: 0;
+  cursor: pointer;
 }
 
 /*============================LOADING SCREEN============================*/
