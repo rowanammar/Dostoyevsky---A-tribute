@@ -18,7 +18,9 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
   padding: 0;
   list-style: none;
 }
-
+canvas {
+  display: block;
+}
 body {
   font-family: 'Georgia', serif;
   background-color: var(--background-color);
@@ -566,4 +568,141 @@ h4{
 .Btn:hover .svgIcon {
   opacity: 0;
   transition-duration: .3s;
+}
+
+
+/*============================Flip Book============================*/
+/*=============================================================*/
+/*=============================================================*/
+
+.flipbook-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.flipBook {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  transition: transform 0.5s;
+}
+
+.paper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  perspective: 1500px;
+}
+
+.front,
+.back {
+  background-color: var(--header-background);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.front {
+  z-index: 1;
+  backface-visibility: hidden;
+  border: var(--border-color) solid 1px;
+  border-left: 3px solid var(--link-color);
+
+}
+
+.back {
+  z-index: 0;
+  border: var(--border-color) solid 1px;
+}
+
+.front-content,
+.back-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.back-content {
+  transform: rotateY(180deg);
+}
+
+.flipped .front,
+.flipped .back {
+  transform: rotateY(-180deg);
+}
+
+/* Flipbook buttons */
+.flipbook-btn {
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  background-color: var(--header-background);
+
+  border-radius: 50%;
+
+
+  transition: transform 0.5s;
+}
+.svg-icon {
+  width: 30px;
+  height: 30px;
+
+  fill: none;
+  stroke: var(--link-hover-color); /* Adjust color as needed */
+}
+
+.flipbook-btn:focus {
+  outline: none;
+}
+
+.flipbook-btn:hover i {
+  color: var(--link-hover-color);
+}
+
+.flipbook-btn i {
+  font-size: 50px;
+  color: gray;
+}
+
+.front p,
+.back p , .front ul , .back ul{
+  font-size: 1.25em;
+  padding: 20px;
+  text-align: center;
+}
+
+#desc{
+  font-size: 1.1em
+}
+.front h2 , .back h2{
+  font-size: 1.8em;
+  padding: 20px;
+  text-align: center;
+}
+
+#p1 {
+  z-index: 3;
+}
+
+#p2 {
+  z-index: 2;
+}
+
+#p3 {
+  z-index: 1;
+}
+
+#container3D{
+  padding: 0;
 }
